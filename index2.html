@@ -1,0 +1,31 @@
+<html>
+<body>
+ 
+<script text="script/javascript">
+ 
+function Aller(repertoire)                     
+{
+ 
+   alert("Debut du test");
+   var fso=new ActiveXObject("Scripting.FileSystemObject");
+ 
+   f = fso.GetFolder(repertoire); 
+   var f1 = new Enumerator(f.files);    
+ 
+ for (; !f1.atEnd(); f1.moveNext())
+ { 
+	alert(f1.item());  
+ }
+ 
+ var f2=new Enumerator(f.subfolders);  
+ 
+ for (; !f2.atEnd(); f2.moveNext())
+ { 
+	//Aller(f2.item());  
+ }	
+}
+ 
+</script>
+<input type=button onclick="Aller('./train/');" value="Test" />
+</body>
+</html>
