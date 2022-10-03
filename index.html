@@ -2,14 +2,14 @@
 
 <h1>Son s</h1>
 <audio id="audioPlayer" loop src="./train/TMARK_Jingle sncf (ID 0396)_LS.mp3">
-  <source src="./TMARK_Jingle sncf (ID 0396)_LS.mp3"></source>
+  <source src="./train/TMARK_Jingle sncf (ID 0396)_LS.mp3"></source>
 </audio>
 
 <button class="control" onclick="play('audioPlayer', this)">Play</button>
 <button class="control" onclick="resume('audioPlayer')">Stop</button>
 
 <audio id="audioPlayer2" src="./train/TMARK_Jingle sncf (ID 0396)_LS.mp3">
-  <source src="./TMARK_Jingle sncf (ID 0396)_LS.mp3"></source>
+  <source src="./train/TMARK_Jingle sncf (ID 0396)_LS.mp3"></source>
 </audio>
 
 <button class="control" onclick="play('audioPlayer2', this)">Play</button>
@@ -17,7 +17,7 @@
 
 <script>
 
-var pdfFilesDirectory = './train/';
+var pdfFilesDirectory = 'https://github.com/pc152/son.github.io/tree/main/train';
 
 // get auto-generated page 
 $.ajax({url: pdfFilesDirectory}).then(function(html) {
