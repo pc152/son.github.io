@@ -1,283 +1,135 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-<style>
-  .btn-xlarge {
-    padding: 18px 28px;
-    font-size: 30px; //change this to your desired size
-    line-height: normal;
-    width:100%;
-    -webkit-border-radius: 8px;
-       -moz-border-radius: 8px;
-            border-radius: 8px;
-}
-</style>
-<p class="h3">ALRMBell_Avertisseur passage niveau (ID 1064)_LS.mp3</p>
-<audio id="audioPlayer1" loop src="./train/ALRMBell_Avertisseur passage niveau (ID 1064)_LS.mp3">
-  <source src="./train/ALRMBell_Avertisseur passage niveau (ID 1064)_LS.mp3"></source>
-</audio>
+<!DOCTYPE html>
+<html lang="en">
 
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer1', this)">Play</button>
-<br />
-<p class="h3">ALRMBell_Sonnerie passage a niveau (ID 0899)_LS.mp3</p>
-<audio id="audioPlayer2" loop src="./train/ALRMBell_Sonnerie passage a niveau (ID 0899)_LS.mp3">
-  <source src="./train/ALRMBell_Sonnerie passage a niveau (ID 0899)_LS.mp3"></source>
-</audio>
+<head>
+  <meta charset="utf-8">
+  <title>Bootstrap, from Twitter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer2', this)">Play</button>
-<br />
+  <!-- Le styles -->
+  <link href="./css/bootstrap.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+    img {
+        max-width: none;
+    }
+  </style>
+  <link href="./css/bootstrap-responsive.css" rel="stylesheet">
 
-<p class="h3">AMBTran_Gare de king s cross st pancras londres (ID 0639)_LS.mp3</p>
-<audio id="audioPlayer3" loop src="./train/AMBTran_Gare de king s cross st pancras londres (ID 0639)_LS.mp3">
-  <source src="./train/AMBTran_Gare de king s cross st pancras londres (ID 0639)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer3', this)">Play</button>
-<br />
-<p class="h3">AMBTran_Gare du nord paris (ID 0634)_LS.mp3</p>
-<audio id="audioPlayer4" loop src="./train/AMBTran_Gare du nord paris (ID 0634)_LS.mp3">
-  <source src="./train/AMBTran_Gare du nord paris (ID 0634)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer4', this)">Play</button>
-<br />
-<p class="h3">AMBTran_Quai de gare du nord paris (ID 0647)_LS.mp3</p>
-<audio id="audioPlayer5" loop src="./train/AMBTran_Quai de gare du nord paris (ID 0647)_LS.mp3">
-  <source src="./train/AMBTran_Quai de gare du nord paris (ID 0647)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer5', this)">Play</button>
-<br />
-<p class="h3">AMBTran_Quai de king s cross st pancras londres (ID 0638)_LS.mp3</p>
-<audio id="audioPlayer6" loop src="./train/AMBTran_Quai de king s cross st pancras londres (ID 0638)_LS.mp3">
-  <source src="./train/AMBTran_Quai de king s cross st pancras londres (ID 0638)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer6', this)">Play</button>
-<br />
-<p class="h3">TMARK_Jingle sncf (ID 0396)_LS.mp3</p>
-<audio id="audioPlayer7" loop src="./train/TMARK_Jingle sncf (ID 0396)_LS.mp3">
-  <source src="./train/TMARK_Jingle sncf (ID 0396)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer7', this)">Play</button>
-<br />
-<p class="h3">TMARK_Jingle sncf 2 (ID 0564)_LS.mp3</p>
-<audio id="audioPlayer8" loop src="./train/TMARK_Jingle sncf 2 (ID 0564)_LS.mp3">
-  <source src="./train/TMARK_Jingle sncf 2 (ID 0564)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer8', this)">Play</button>
-<br />
-<p class="h3">TOYElec_Train electrique en lego 1 (ID 1606)_LS.mp3</p>
-<audio id="audioPlayer9" loop src="./train/TOYElec_Train electrique en lego 1 (ID 1606)_LS.mp3">
-  <source src="./train/TOYElec_Train electrique en lego 1 (ID 1606)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer9', this)">Play</button>
-<br />
-<p class="h3">TOYElec_Train electrique en lego 2 (ID 1607)_LS.mp3</p>
-<audio id="audioPlayer10" loop src="./train/TOYElec_Train electrique en lego 2 (ID 1607)_LS.mp3">
-  <source src="./train/TOYElec_Train electrique en lego 2 (ID 1607)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer10', this)">Play</button>
-<br />
-<p class="h3">TRNDiesl_Locomotive diesel a l arret (ID 0369)_LS.mp3</p>
-<audio id="audioPlayer11" loop src="./train/TRNDiesl_Locomotive diesel a l arret (ID 0369)_LS.mp3">
-  <source src="./train/TRNDiesl_Locomotive diesel a l arret (ID 0369)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer11', this)">Play</button>
-<br />
-<p class="h3">TRNElec_Passage un train (ID 0900)_LS.mp3</p>
-<audio id="audioPlayer12" loop src="./train/TRNElec_Passage un train (ID 0900)_LS.mp3">
-  <source src="./train/TRNElec_Passage un train (ID 0900)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer12', this)">Play</button>
-<br />
-<p class="h3">TRNElec_Train en gare 1 (ID 2723)_LS.mp3</p>
-<audio id="audioPlaye13" loop src="./train/TRNElec_Train en gare 1 (ID 2723)_LS.mp3">
-  <source src="./train/TRNElec_Train en gare 1 (ID 2723)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer13', this)">Play</button>
-<br />
-<p class="h3">TRNElec_Train en gare 2 (ID 2724)_LS.mp3</p>
-<audio id="audioPlayer14" loop src="./train/TRNElec_Train en gare 2 (ID 2724)_LS.mp3">
-  <source src="./train/TRNElec_Train en gare 2 (ID 2724)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer14', this)">Play</button>
-<br />
-<p class="h3">TRNElec_Train en gare 3 (ID 2725)_LS.mp3</p>
-<audio id="audioPlayer15" loop src="./train/TRNElec_Train en gare 3 (ID 2725)_LS.mp3">
-  <source src="./train/TRNElec_Train en gare 3 (ID 2725)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer15', this)">Play</button>
-<br />
-<p class="h3">TRNElec_Train en gare 4 (ID 2726)_LS.mp3</p>
-<audio id="audioPlayer16" loop src="./train/TRNElec_Train en gare 4 (ID 2726)_LS.mp3">
-  <source src="./train/TRNElec_Train en gare 4 (ID 2726)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer16', this)">Play</button>
-<br />
-<p class="h3">TRNElec_Train passe 1 (ID 1062)_LS.mp3</p>
-<audio id="audioPlayer17" loop src="./train/TRNElec_Train passe 1 (ID 1062)_LS.mp3">
-  <source src="./train/TRNElec_Train passe 1 (ID 1062)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer17', this)">Play</button>
-<br />
-<p class="h3">TRNElec_Train passe 2 (ID 1063)_LS.mp3</p>
-<audio id="audioPlayer18" loop src="./train/TRNElec_Train passe 2 (ID 1063)_LS.mp3">
-  <source src="./train/TRNElec_Train passe 2 (ID 1063)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer18', this)">Play</button>
-<br />
-<p class="h3">TRNHorn_Avertisseur sonore de train (ID 0277)_LS.mp3</p>
-<audio id="audioPlayer19" loop src="./train/TRNHorn_Avertisseur sonore de train (ID 0277)_LS.mp3">
-  <source src="./train/TRNHorn_Avertisseur sonore de train (ID 0277)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer19', this)">Play</button>
-<br />
-<p class="h3">TRNHorn_Avertisseur sonore de train 2 (ID 2846)_LS.mp3</p>
-<audio id="audioPlayer20" loop src="./train/TRNHorn_Avertisseur sonore de train 2 (ID 2846)_LS.mp3">
-  <source src="./train/TRNHorn_Avertisseur sonore de train 2 (ID 2846)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer20', this)">Play</button>
-<br />
-<p class="h3">TRNHorn_Avertisseur sonore de train 3 (ID 2847)_LS.mp3</p>
-<audio id="audioPlayer21" loop src="./train/TRNHorn_Avertisseur sonore de train 3 (ID 2847)_LS.mp3">
-  <source src="./train/TRNHorn_Avertisseur sonore de train 3 (ID 2847)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer21', this)">Play</button>
-<br />
-
-<p class="h3">TRNHorn_Sifflement de train 1 (ID 0225)_LS.mp3</p>
-<audio id="audioPlayer22" loop src="./train/TRNHorn_Sifflement de train 1 (ID 0225)_LS.mp3">
-  <source src="./train/TRNHorn_Sifflement de train 1 (ID 0225)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer22', this)">Play</button>
-<br />
-<p class="h3">TRNHorn_Sifflement de train 2 (ID 0226)_LS.mp3</p>
-<audio id="audioPlayer23" loop src="./train/TRNHorn_Sifflement de train 2 (ID 0226)_LS.mp3">
-  <source src="./train/TRNHorn_Sifflement de train 2 (ID 0226)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer23', this)">Play</button>
-<br />
-<p class="h3">TRNHorn_Sifflement de train a vapeur 1 (ID 0227)_LS.mp3</p>
-<audio id="audioPlayer24" loop src="./train/TRNHorn_Sifflement de train a vapeur 1 (ID 0227)_LS.mp3">
-  <source src="./train/TRNHorn_Sifflement de train a vapeur 1 (ID 0227)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer24', this)">Play</button>
-<br />
-<p class="h3">TRNHorn_Sifflement de train a vapeur 2 (ID 0228)_LS.mp3</p>
-<audio id="audioPlayer25" loop src="./train/TRNHorn_Sifflement de train a vapeur 2 (ID 0228)_LS.mp3">
-  <source src="./train/TRNHorn_Sifflement de train a vapeur 2 (ID 0228)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer25', this)">Play</button>
-<br />
-<p class="h3">TRNHspd_Tgv passage 1 (ID 0120)_LS.mp3</p>
-<audio id="audioPlayer26" loop src="./train/TRNHspd_Tgv passage 1 (ID 0120)_LS.mp3">
-  <source src="./train/TRNHspd_Tgv passage 1 (ID 0120)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer26', this)">Play</button>
-<br />
-<p class="h3">TRNHspd_Tgv passage 2 (ID 0121)_LS.mp3</p>
-<audio id="audioPlayer27" loop src="./train/TRNHspd_Tgv passage 2 (ID 0121)_LS.mp3">
-  <source src="./train/TRNHspd_Tgv passage 2 (ID 0121)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer27', this)">Play</button>
-<br />
-<p class="h3">TRNInt_Metropolitain paris (ID 0090)_LS.mp3</p>
-<audio id="audioPlayer28" loop src="./train/TRNInt_Metropolitain paris (ID 0090)_LS.mp3">
-  <source src="./train/TRNInt_Metropolitain paris (ID 0090)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer28', this)">Play</button>
-<br />
-<p class="h3">TRNInt_Metropolitain paris (ID 0092)_LS.mp3</p>
-<audio id="audioPlayer29" loop src="./train/TRNInt_Metropolitain paris (ID 0092)_LS.mp3">
-  <source src="./train/TRNInt_Metropolitain paris (ID 0092)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer29', this)">Play</button>
-<br />
-<p class="h3">TRNInt_Toilettes eurostar (ID 0637)_LS.mp3</p>
-<audio id="audioPlayer30" loop src="./train/TRNInt_Toilettes eurostar (ID 0637)_LS.mp3">
-  <source src="./train/TRNInt_Toilettes eurostar (ID 0637)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer30', this)">Play</button>
-<br />
-<p class="h3">TRNInt_Wagon de micheline (ID 0212)_LS.mp3</p>
-<audio id="audioPlayer31" loop src="./train/TRNInt_Wagon de micheline (ID 0212)_LS.mp3">
-  <source src="./train/TRNInt_Wagon de micheline (ID 0212)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer31', this)">Play</button>
-<br />
-<p class="h3">TRNInt_Wagon de train (ID 2727)_LS.mp3</p>
-<audio id="audioPlayer32" loop src="./train/TRNInt_Wagon de train (ID 2727)_LS.mp3">
-  <source src="./train/TRNInt_Wagon de train (ID 2727)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer32', this)">Play</button>
-<br />
-<p class="h3">TRNInt_Wagon eurostar (ID 0635)_LS.mp3</p>
-<audio id="audioPlayer33" loop src="./train/TRNInt_Wagon eurostar (ID 0635)_LS.mp3">
-  <source src="./train/TRNInt_Wagon eurostar (ID 0635)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer33', this)">Play</button>
-<br />
-<p class="h3">TRNInt_Wagon eurostar tunnel (ID 0636)_LS.mp3</p>
-<audio id="audioPlayer34" loop src="./train/TRNInt_Wagon eurostar tunnel (ID 0636)_LS.mp3">
-  <source src="./train/TRNInt_Wagon eurostar tunnel (ID 0636)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer34', this)">Play</button>
-<br />
-<p class="h3">TRNTram_Passage de tramway (ID 0278)_LS.mp3</p>
-<audio id="audioPlayer34" loop src="./train/TRNTram_Passage de tramway (ID 0278)_LS.mp3">
-  <source src="./train/TRNTram_Passage de tramway (ID 0278)_LS.mp3"></source>
-</audio>
-
-<button class="btn btn-primary btn-xlarge" onclick="play('audioPlayer34', this)">Play</button>
-<script>
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+      <script src="./js/html5shiv.js"></script>
+    <![endif]-->
 
 
-function play(idPlayer, control) {
+</head>
 
-var player = document.querySelector('#' + idPlayer);
+<body>
 
-if (player.paused) {
-    player.play();
-    control.textContent = 'Pause';
-} else {
-    player.pause();
-    control.textContent = 'Play';
-}
-}
+  <div class="container">
+
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <!-- <div class="hero-unit">
+      <h1>Son divers</h1>
+    </div> -->
+
+    <!-- Example row of columns -->
+    <div class="row" id="musique">
+
+    </div>
+
+    <hr>
+
+    <footer>
+      <p>&copy; Noham CHOULANT 2022</p>
+    </footer>
+
+  </div> <!-- /container -->
+
+
+  <script>
+
+    var arr = [ 
+      {"son":"ALRMBell_Avertisseur passage niveau (ID 1064)_LS.mp3","id":1}
+    , {"son":"ALRMBell_Sonnerie passage a niveau (ID 0899)_LS.mp3","id":2}
+    , {"son":"AMBTran_Gare de king s cross st pancras londres (ID 0639)_LS.mp3","id":3}
+    , {"son":"AMBTran_Gare du nord paris (ID 0634)_LS.mp3","id":4}
+    , {"son":"AMBTran_Quai de gare du nord paris (ID 0647)_LS.mp3","id":5}
+    , {"son":"AMBTran_Quai de king s cross st pancras londres (ID 0638)_LS.mp3","id":6}
+    , {"son":"TMARK_Jingle sncf (ID 0396)_LS.mp3","id":7}
+    , {"son":"TMARK_Jingle sncf 2 (ID 0564)_LS.mp3","id":8}
+    , {"son":"TOYElec_Train electrique en lego 1 (ID 1606)_LS.mp3","id":9}
+    , {"son":"TOYElec_Train electrique en lego 2 (ID 1607)_LS.mp3","id":10}
+    , {"son":"TRNDiesl_Locomotive diesel a l arret (ID 0369)_LS.mp3","id":11}
+    , {"son":"TRNElec_Passage un train (ID 0900)_LS.mp3","id":12}
+    , {"son":"TRNElec_Train en gare 1 (ID 2723)_LS.mp3","id":13}
+    , {"son":"TRNElec_Train en gare 2 (ID 2724)_LS.mp3","id":14}
+    , {"son":"TRNElec_Train en gare 3 (ID 2725)_LS.mp3","id":15}
+    , {"son":"TRNElec_Train en gare 4 (ID 2726)_LS.mp3","id":16}
+    , {"son":"TRNElec_Train passe 1 (ID 1062)_LS.mp3","id":17}
+    , {"son":"TRNElec_Train passe 2 (ID 1063)_LS.mp3","id":18}
+    , {"son":"TRNHorn_Avertisseur sonore de train (ID 0277)_LS.mp3","id":19}
+    , {"son":"TRNHorn_Avertisseur sonore de train 2 (ID 2846)_LS.mp3","id":20}
+    , {"son":"TRNHorn_Avertisseur sonore de train 3 (ID 2847)_LS.mp3","id":21}
+    , {"son":"TRNHorn_Sifflement de train 1 (ID 0225)_LS.mp3","id":22}
+    , {"son":"TRNHorn_Sifflement de train a vapeur 1 (ID 0227)_LS.mp3","id":23}
+    , {"son":"TRNHorn_Sifflement de train a vapeur 2 (ID 0228)_LS.mp3","id":24}
+    , {"son":"TRNHspd_Tgv passage 1 (ID 0120)_LS.mp3","id":25}
+    , {"son":"TRNHspd_Tgv passage 2 (ID 0121)_LS.mp3","id":26}
+    , {"son":"TRNInt_Metropolitain paris (ID 0090)_LS.mp3","id":27}
+    , {"son":"TRNInt_Metropolitain paris (ID 0092)_LS.mp3","id":28}
+    , {"son":"TRNInt_Toilettes eurostar (ID 0637)_LS.mp3","id":29}
+    , {"son":"TRNInt_Wagon de micheline (ID 0212)_LS.mp3","id":30}
+    , {"son":"TRNInt_Wagon de train (ID 2727)_LS.mp3","id":31}
+    , {"son":"TRNInt_Wagon eurostar (ID 0635)_LS.mp3","id":32}
+    , {"son":"TRNInt_Wagon eurostar tunnel (ID 0636)_LS.mp3","id":33}
+    , {"son":"TRNTram_Passage de tramway (ID 0278)_LS.mp3","id":34}
+  
+  
+  ];
+    
+    for (var myson of arr){
+      
+      var musique = document.getElementById('musique');
+        let div=document.createElement("div");
+        div.style = "width: 100%;height: 150px;"
+        div.innerHTML=` <img src="./img/noson.webp" id="img` + myson.id + `"  onclick="play('img` + myson.id + `','audioPlayer` + myson.id + `', this)" style="width: 100%;height: 100%;"/>
+                        <audio id="audioPlayer` + myson.id + `" loop src="./train/` + myson.son + `">
+                          <source src="./train/` + myson.son + `">
+                          </source>
+                        </audio>`;
+        musique.append(div);
+
+    }
+
+    function play(img,idPlayer, control) {
+      var player = document.querySelector('#' + idPlayer);
+
+
+      if (player.paused) {
+        player.play();
+        document.getElementById(img).src="./img/son.gif";
+      } else {
+      player.currentTime = 0;
+        document.getElementById(img).src="./img/noson.webp";
+        player.pause();
+      }
+    }
 
 
 
-function resume(idPlayer) {
-var player = document.querySelector('#' + idPlayer);
-player.currentTime = 0;
-player.pause();
-}
-</script>
+  
+
+  </script>
+
+</body>
+
+</html>
